@@ -1,0 +1,294 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: #e6e6e6;
+    width: 100%;
+    height: 100%;
+    font: 12px "Open Sans", sans-serif;
+}
+
+#wrapper {
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+    margin: 20px auto;
+    background: #fff;
+    border: 1px solid #c6c6c6;
+}
+
+#wrapper h1 {
+    padding: 0 15px;
+    margin-top: 35px;
+    color: #000;
+    font-weight: 600;
+    font-size: 25px;
+    text-align: center;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+div.screen {
+    height: auto;
+    overflow: hidden;
+    background: transparent;
+    margin: 15px;
+}
+
+.list {
+    margin-top: 36px;
+    text-align: left;
+}
+
+.item {
+    height: 115px;
+    margin-left: 115px;
+    clear: both;
+}
+
+.item .img,
+.item span {
+    background: #f0f0f0;
+}
+
+.item .img {
+    float: left;
+    width: 96px;
+    height: 81px;
+    margin-left: -113px;
+}
+
+.item span {
+    height: 11px;
+    width: 320px;
+    margin-bottom: 19px;
+    float: left;
+}
+
+.item span:nth-of-type(3) {
+    width: 95px;
+    margin-bottom: 0;
+}
+
+a:link {
+    color: #e76e66;
+    text-decoration: none;
+    outline: none;
+    transition: all 0.25s;
+}
+
+a:visited {
+    color: #666;
+    text-decoration: none;
+}
+
+a:link:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:visited:hover {
+    color: #e76e66;
+    text-decoration: none;
+}
+
+/* CSS Multiple Whatsapp Chat */
+#whatsapp-chat {
+    position: fixed;
+    background: #fff;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 1px 15px rgba(32, 33, 36, 0.28);
+    bottom: 90px;
+    right: 30px;
+    overflow: hidden;
+    z-index: 99;
+    animation-name: showchat;
+    animation-duration: 1s;
+    transform: scale(1);
+}
+a.hensobshow-chat {
+    background: linear-gradient(to right top, #6f96f3, #164ed2);
+    color: #fff;
+    position: fixed;
+    z-index: 98;
+    bottom: 25px;
+    right: 30px;
+    font-size: 15px;
+    padding: 18px;
+    border-radius: 50px;
+    box-shadow: 0 1px 15px rgba(32, 33, 36, 0.28);
+}
+a.hensobshow-chat i {
+    transform: scale(1.5);
+    margin: 0;
+}
+.header-chat {
+    background: linear-gradient(to right top, #6f96f3, #164ed2);
+    color: #fff;
+    padding: 20px;
+}
+.header-chat h3 {
+    margin: 0 0 10px;
+}
+.header-chat p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+.info-avatar {
+    position: relative;
+}
+.info-avatar img {
+    border-radius: 100%;
+    width: 50px;
+    float: left;
+    margin: 0 10px 0 0;
+}
+.info-avatar:before {
+    content: "\f232";
+    z-index: 1;
+    font-family: "Font Awesome 5 Brands";
+    background: #23ab23;
+    color: #fff;
+    padding: 4px 5px;
+    border-radius: 100%;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+a.informasi {
+    padding: 20px;
+    display: block;
+    overflow: hidden;
+    animation-name: showhide;
+    animation-duration: 2.5s;
+}
+a.informasi:hover {
+    background: #f1f1f1;
+}
+.info-chat span {
+    display: block;
+}
+#get-label,
+span.chat-label {
+    font-size: 12px;
+    color: #888;
+}
+#get-nama,
+span.chat-nama {
+    margin: 5px 0 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: #222;
+}
+#get-label,
+#get-nama {
+    color: #fff;
+}
+span.my-number {
+    display: none;
+}
+.hensob-msg {
+    color: #444;
+    padding: 20px;
+    font-size: 12.5px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+textarea#chat-input {
+    border: none;
+    font-family: "Arial", sans-serif;
+    width: 100%;
+    height: 20px;
+    outline: none;
+    resize: none;
+}
+a#send-it {
+    color: #555;
+    width: 40px;
+    margin: -5px 0 0 5px;
+    font-weight: 700;
+    padding: 8px;
+    background: #eee;
+    border-radius: 10px;
+}
+.first-msg {
+    background: #f5f5f5;
+    padding: 30px;
+    text-align: center;
+}
+.first-msg span {
+    background: #e2e2e2;
+    color: #333;
+    font-size: 14.2px;
+    line-height: 1.7;
+    border-radius: 10px;
+    padding: 15px 20px;
+    display: inline-block;
+}
+.start-chat .hensob-msg {
+    display: flex;
+}
+#get-number {
+    display: none;
+}
+a.close-chat {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    color: #fff;
+    font-size: 30px;
+}
+@keyframes showhide {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}
+@keyframes showchat {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+.hide {
+    display: none;
+    animation-name: showhide;
+    animation-duration: 1.5s;
+    transform: scale(1);
+    opacity: 1;
+}
+.show {
+    display: block;
+    animation-name: showhide;
+    animation-duration: 1.5s;
+    transform: scale(1);
+    opacity: 1;
+}
+
+@media screen and (max-width: 920px) {
+    #wrapper {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 420px) {
+    #wrapper h1 {
+        font-size: 30px;
+    }
+    #whatsapp-chat {
+        width: auto;
+        left: 5%;
+        right: 5%;
+        font-size: 80%;
+    }
+     a.hensobshow-chat {
+        padding: 35px;
+    }
+     a.hensobshow-chat i {
+        transform: scale(2.5);
+    }
+}
