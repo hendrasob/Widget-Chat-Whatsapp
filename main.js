@@ -1,3 +1,4 @@
+// get whatsapp sending
 $(document).on("click", "#send-it", function () {
     var a = document.getElementById("chat-input");
     if ("" != a.value) {
