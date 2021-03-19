@@ -24,7 +24,7 @@ body {
     margin-top: 35px;
     color: #000;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 26px;
     text-align: center;
     -webkit-animation-delay: 1s;
     animation-delay: 1s;
@@ -277,7 +277,7 @@ a.close-chat {
 
 @media screen and (min-width: 420px) {
     #wrapper h1 {
-        font-size: 30px;
+        font-size: 32px;
     }
     #whatsapp-chat {
         width: auto;
